@@ -1,0 +1,293 @@
+/* Green Theme for ERPNext v16 */
+
+:root {
+    /* Primary Green Colors */
+    --primary-color: #10b981;      /* Emerald green */
+    --primary-dark: #059669;       /* Darker green for hover */
+    --primary-light: #34d399;      /* Lighter green */
+    --primary-subtle: #d1fae5;     /* Very light green for backgrounds */
+    
+    /* Sidebar - Dark Green Theme */
+    --sidebar-bg: #064e3b;         /* Dark emerald */
+    --sidebar-color: #d1fae5;      /* Light green text */
+    --sidebar-hover-bg: #065f46;   /* Slightly lighter on hover */
+    --sidebar-selected-bg: #047857; /* Selected item */
+    
+    /* Top Navbar */
+    --navbar-bg: #ffffff;
+    --navbar-color: #064e3b;
+    --navbar-border: #d1fae5;
+    
+    /* Background Colors */
+    --bg-color: #f0fdf4;           /* Very light green tint */
+    --card-bg: #ffffff;
+    --hover-bg: #ecfdf5;
+    
+    /* Text Colors */
+    --text-color: #064e3b;
+    --text-muted: #6b7280;
+    --heading-color: #065f46;
+    
+    /* Borders */
+    --border-color: #d1fae5;
+    --border-dark: #10b981;
+    
+    /* Status Colors (keeping green theme) */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #3b82f6;
+}
+
+/* ============================================
+   PRIMARY BUTTONS
+   ============================================ */
+.btn-primary,
+.btn-primary-light {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary-light:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25) !important;
+}
+
+/* ============================================
+   SIDEBAR STYLING
+   ============================================ */
+.desk-sidebar {
+    background-color: var(--sidebar-bg) !important;
+    border-right: 1px solid var(--sidebar-hover-bg);
+}
+
+.desk-sidebar .sidebar-item-label {
+    color: var(--sidebar-color) !important;
+}
+
+.desk-sidebar .sidebar-item:hover {
+    background-color: var(--sidebar-hover-bg) !important;
+}
+
+.desk-sidebar .sidebar-item.selected {
+    background-color: var(--sidebar-selected-bg) !important;
+}
+
+.desk-sidebar .sidebar-item.selected .sidebar-item-label {
+    color: white !important;
+    font-weight: 500;
+}
+
+/* Sidebar icons */
+.desk-sidebar .sidebar-item-icon {
+    color: var(--sidebar-color) !important;
+}
+
+/* Sidebar section headings */
+.desk-sidebar .sidebar-label {
+    color: var(--primary-light) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================
+   NAVBAR STYLING
+   ============================================ */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 2px solid var(--navbar-border) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--navbar-color) !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Search bar in navbar */
+.navbar .form-control {
+    border-color: var(--border-color);
+}
+
+.navbar .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.15);
+}
+
+/* ============================================
+   CARDS & CONTAINERS
+   ============================================ */
+.card {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(6, 78, 59, 0.1);
+    background-color: var(--card-bg);
+}
+
+.card-header {
+    background-color: var(--primary-subtle);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   LINKS & ACCENTS
+   ============================================ */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Indicators and badges */
+.badge-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.indicator.green,
+.indicator-pill.green {
+    background-color: var(--primary-color) !important;
+}
+
+/* ============================================
+   FORM CONTROLS
+   ============================================ */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.15);
+}
+
+/* Checkboxes and radio buttons */
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ============================================
+   TABLES & LIST VIEWS
+   ============================================ */
+.list-row:hover {
+    background-color: var(--hover-bg) !important;
+}
+
+.list-row.selected {
+    background-color: var(--primary-subtle) !important;
+}
+
+/* Table headers */
+.table th {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+.nav-tabs .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom-color: var(--primary-color) !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   MODALS & DIALOGS
+   ============================================ */
+.modal-header {
+    background-color: var(--primary-subtle);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.modal-title {
+    color: var(--heading-color);
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-head {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-title {
+    color: var(--heading-color) !important;
+}
+
+/* ============================================
+   WORKSPACE & DESKTOP
+   ============================================ */
+.desk-page {
+    background-color: var(--bg-color);
+}
+
+.widget .widget-head {
+    color: var(--heading-color);
+}
+
+/* Workspace shortcuts */
+.shortcut-widget-box {
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.shortcut-widget-box:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   PROGRESS BARS
+   ============================================ */
+.progress-bar {
+    background-color: var(--primary-color) !important;
+}
+
+/* ============================================
+   ALERTS
+   ============================================ */
+.alert-success {
+    background-color: var(--primary-subtle);
+    border-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   CUSTOM BRANDING
+   ============================================ */
+/* Logo area */
+.navbar-brand img {
+    /* Add any logo-specific styling here */
+}
+
+/* Login page */
+.for-login {
+    background: linear-gradient(135deg, var(--primary-subtle) 0%, white 100%);
+}
+
+.login-content {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(6, 78, 59, 0.1);
+}

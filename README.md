@@ -1,33 +1,35 @@
-### Green Theme
+# Green Theme for ERPNext v16
 
-Custom styling for ERPNext v16
+A custom green-themed styling for Frappe ERPNext version 16.
 
-### Installation
-
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
-
+## Installation
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch version-16
-bench install-app green_theme
+# Get the app
+bench get-app https://github.com/YOUR_USERNAME/green_theme.git
+
+# Install on your site
+bench --site your-site-name install-app green_theme
+
+# Build assets
+bench build --app green_theme
 ```
 
-### Contributing
+## Features
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+- Custom green color scheme
+- Dark green sidebar
+- Enhanced buttons and form controls
+- Improved card styling
+- Consistent theming across desk and portal
 
-```bash
-cd apps/green_theme
-pre-commit install
-```
+## Customization
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+Edit `green_theme/public/css/green_theme.css` to customize colors and styles.
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+## Version
 
-### License
+Compatible with Frappe/ERPNext version 16
 
-mit
+## License
+
+MIT

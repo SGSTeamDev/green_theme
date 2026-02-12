@@ -28,6 +28,21 @@ app_license = "mit"
 # app_include_css = "/assets/green_theme/css/green_theme.css"
 # app_include_js = "/assets/green_theme/js/green_theme.js"
 
+app_include_css = [
+    "/assets/green_theme/css/green_theme.css"
+]
+
+# Web (portal) CSS - applies to customer/supplier portal
+web_include_css = [
+    "/assets/green_theme/css/green_theme.css"
+]
+
+# Specify required Frappe version
+required_apps = ["frappe"]
+
+# Version information
+__version__ = "0.0.1"
+
 # include js, css files in header of web template
 # web_include_css = "/assets/green_theme/css/green_theme.css"
 # web_include_js = "/assets/green_theme/js/green_theme.js"

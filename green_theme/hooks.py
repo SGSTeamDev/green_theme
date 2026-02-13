@@ -29,12 +29,19 @@ app_license = "mit"
 # app_include_js = "/assets/green_theme/js/green_theme.js"
 
 app_include_css = [
-    "/assets/green_theme/css/green_theme.css"
+    "/assets/green_theme/css/green_theme.css",
+    "/assets/green_theme/css/sidebar-green.css"  # New sidebar styles
+]
+
+app_include_js = [
+    "/assets/green_theme/js/botpress_init.js",
+    "/assets/green_theme/js/workspace_logo.js"
 ]
 
 # Web (portal) CSS - applies to customer/supplier portal
 web_include_css = [
-    "/assets/green_theme/css/green_theme.css"
+    "/assets/green_theme/css/green_theme.css",
+    "/assets/green_theme/css/login_style.css"
 ]
 
 # Specify required Frappe version

@@ -1,0 +1,70 @@
+/* --- LOGIN PAGE BRANDING --- */
+
+/* Target the body using the data-path attribute found in your inspector */
+body[data-path="login"] {
+    /* Use a high-quality brand green fallback + your image */
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(24, 90, 60, 0.75)), 
+                url('/assets/green_theme/images/login-bg.png') no-repeat center center fixed !important;
+    background-color: #185a3c !important; /* Fallback brand green */
+    background-size: cover !important;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Override Frappe's default light-gray background variable for the login path */
+body[data-path="login"] #page-login {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* --- FOOTER & LOGO --- */
+.login-footer, .login-footer a {
+    color: #ffffff !important;
+}
+
+/* Ensure the login button matches your primary green */
+.btn-login {
+    background-color: #185a3c !important;
+    border-color: #185a3c !important;
+    color: #ffffff !important;
+}
+
+
+/* If you want a Video background, you usually need a custom template, 
+   but we can fake a dynamic look with a CSS animation gradient if preferred. */
+
+/* 2. Style the Login Card */
+.for-login .page-card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px); /* Modern frosted glass effect */
+    border-radius: 15px !important;
+    border: 2px solid var(--brand-gold, #f1c40f) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 3. Logo Customization */
+/* Frappe looks for the logo set in 'Website Settings' or 'Navbar Settings' */
+.for-login .page-card-head img {
+    max-height: 200px !important;
+    margin-bottom: 20px;
+}
+
+/* 4. Login Button (Green & Gold) */
+.for-login .btn-login {
+    background-color: #185a3c !important;
+    border-color: #185a3c !important;
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.for-login .btn-login:hover {
+    background-color: #f1c40f !important;
+    border-color: #f1c40f !important;
+    color: #1a1a1a !important;
+}
+
+/* 5. Hide 'Powered by Frappe' or customize footer text */
+.login-footer {
+    color: white !important;
+}

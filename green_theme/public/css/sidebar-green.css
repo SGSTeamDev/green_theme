@@ -1,0 +1,84 @@
+/* --- BRAND VARIABLES --- */
+:root {
+    --brand-green: #185a3c;
+    --brand-green-hover: #12462e; 
+    --brand-gold: #f1c40f;
+    --brand-dark: #1a1a1a; 
+}
+
+/* --- 1. BASE SIDEBAR LAYOUT --- */
+.body-sidebar {
+    background: var(--brand-green) none !important; 
+    background-color: var(--brand-green) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Base Global Text & Icon Color (White) */
+.body-sidebar .standard-sidebar-item .item-anchor,
+.body-sidebar .standard-sidebar-item .sidebar-item-label,
+.body-sidebar .collapse-sidebar-link span,
+.body-sidebar .section-break,
+.body-sidebar svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* --- 2. HEADER & FOOTER VISIBILITY --- */
+/* Targets App Title (Top) and User Profile (Bottom) */
+.body-sidebar .sidebar-header .header-title,
+.body-sidebar .sidebar-header .header-subtitle,
+.body-sidebar .sidebar-header .sidebar-item-label,
+.body-sidebar .body-sidebar-bottom .sidebar-item-label,
+.body-sidebar .body-sidebar-bottom .sidebar-item-subtitle,
+.body-sidebar .body-sidebar-bottom .text-truncate,
+.body-sidebar .body-sidebar-bottom span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Section Headers (Tools, Setup, etc.) */
+.body-sidebar .section-break {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Dividers */
+.body-sidebar .divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* --- 3. HOVER STATES --- */
+/* Ensures hover background is dark green so white text remains visible */
+.body-sidebar .standard-sidebar-item:not(.active-sidebar):hover,
+.body-sidebar .sidebar-header:hover,
+.body-sidebar .dropdown-navbar-user:hover,
+.body-sidebar .nested-container .standard-sidebar-item:hover {
+    background: var(--brand-green-hover) !important;
+    background-color: var(--brand-green-hover) !important;
+    border-radius: 8px;
+}
+
+/* --- 4. ACTIVE STATE (THE SPECIFICITY FIX) --- */
+/* Using high specificity to ensure Gold background + Dark text */
+.body-sidebar .standard-sidebar-item.active-sidebar {
+    background: var(--brand-gold) none !important;
+    background-color: var(--brand-gold) !important;
+    border-radius: 8px;
+}
+
+.body-sidebar .standard-sidebar-item.active-sidebar .item-anchor,
+.body-sidebar .standard-sidebar-item.active-sidebar .sidebar-item-label,
+.body-sidebar .standard-sidebar-item.active-sidebar .sidebar-item-icon svg,
+.body-sidebar .standard-sidebar-item.active-sidebar span {
+    color: var(--brand-dark) !important;
+    stroke: var(--brand-dark) !important;
+    font-weight: 600 !important;
+}
+
+/* Nested (Sub-menu) item label adjustment */
+.body-sidebar .nested-container .sidebar-item-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+}

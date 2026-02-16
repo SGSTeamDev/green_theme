@@ -84,8 +84,10 @@
 
 /* Target the body specifically when on the desk */
 body[data-route="desk"], 
-body[data-route="Workspaces"] {
-    background-color: #f4f7f6 !important; /* Your light green tint */
+body[data-route=""] {
+    background: url('/assets/green_theme/images/bg-desk.png') no-repeat center center fixed !important;
+    background-color: #f4f7f6 !important; /* Your light green tint - fallback */
+    background-size: cover !important;
 }
 
 /* image_7b0777.jpg shows .main-section is the primary wrapper */
@@ -127,9 +129,9 @@ body[data-route="Workspaces"] {
 }
 
 /* Ensure the root body has your light tint from top to bottom */
-body {
+/* body {
     background-color: #f4f7f6 !important;
-}
+} */
 
 
 /* --- FULL DESK BACKGROUND COVERAGE --- */
@@ -144,9 +146,9 @@ body {
     background: transparent !important;
 }
 
-body {
-    background-color: #f4f7f6 !important; /* Your light brand tint */
-}
+/* body {
+    background-color: #f4f7f6 !important; 
+} */
 
 
 .custom-workspace-logo {
@@ -164,4 +166,33 @@ body {
     background-repeat: no-repeat !important;
     background-position: center 20% !important;
     background-size: 300px !important;
+}
+
+
+/* --- CUSTOM SPLASH SCREEN OVERRIDE --- */
+
+/* Target the specific container from your snippet */
+.centered.splash img {
+    /* Hide the original ERPNext logo */
+    visibility: hidden !important;
+    width: 0 !important;
+}
+
+.centered.splash {
+    /* Set your logo as a background image on the container instead */
+    background-image: url('/assets/green_theme/images/splash.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    
+    /* Ensure the container has enough height to show your logo */
+    min-height: 200px; 
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Match the splash background to your Green Theme tint */
+body.splash-body {
+    background-color: #f4f7f6 !important;
 }
